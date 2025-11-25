@@ -69,7 +69,7 @@ const HeaderChat = ({
         <input
           type="text"
           placeholder="Search..."
-          className="flex-1 outline-none text-gray-600 text-sm bg-transparent min-w-0"
+          className="flex-1 w-[900px] outline-none text-gray-600 text-sm bg-transparent min-w-0"
           onChange={(e) => setSearch(e.target.value)}
         />
 

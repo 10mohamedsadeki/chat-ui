@@ -111,7 +111,7 @@ export default function ChatList({ search, filterType, onSelectChat, setShowAICh
                   setSelectedChatId(user.id);
                   onSelectChat({ id: user.id, type: "user" });
                   setShowAIChat(false);
-                  console.log("Clicked chat:", user);
+                  
                 }}
                 isSelected={selectedChatId === user.id}
               />

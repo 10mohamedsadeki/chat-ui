@@ -10,7 +10,6 @@ export default defineConfig({
         target: "https://mock-test.worthycodes.com",
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, "/api"),
       },
     },
   },

@@ -1,0 +1,81 @@
+export const groupChats = [
+  {
+    id: 1,
+    avatarText: "AD",
+    name: "BakuliMsc",
+    message: "General thoughts 😄",
+    badge: 1,
+    initials: "BM",
+    isGroup: true,
+  },
+  {
+    id: 2,
+    avatarText: "MS",
+    name: "Moonlab Std",
+    message: "Suwun bos!",
+    badge: 12,
+    initials: "MS",
+    isGroup: true,
+  },
+  {
+    id: 3,
+    avatarText: "OG",
+    name: "Omah Guyup",
+    message: "Thanks! I'm going to forward the...",
+    initials: "OG",
+    isGroup: true,
+  },
+  {
+    id: 4,
+    avatarText: "SM",
+    name: "Sughi Mantelo",
+    message: "RevenueUpdates.pdf",
+    badge: 7,
+    initials: "SM",
+    isGroup: true,
+  },
+  {
+    id: 5,
+    avatarText: "PH",
+    name: "Para Habib",
+    message: "Okay, Cool!",
+    initials: "PH",
+    isGroup: true,
+  },
+];
+
+export const personChats = [
+  {
+    id: 1,
+    avatar: "https://i.pravatar.cc/150?img=32",
+    name: "Lilian Davis",
+    message: "OMG!!!",
+    badge: 2,
+  },
+  {
+    id: 2,
+    avatar: "https://i.pravatar.cc/150?img=12",
+    name: "Gavin Harrison",
+    message: "You can check it now.",
+  },
+  {
+    id: 3,
+    avatar: "https://i.pravatar.cc/150?img=5",
+    name: "Helena Wong",
+    message: "Please share those recap to me...",
+    badge: 14,
+  },
+  {
+    id: 4,
+    avatar: "https://i.pravatar.cc/150?img=20",
+    name: "Ruth Murray",
+    message: "Thanks 😄",
+    badge: 4,
+  },
+  {
+    id: 5,
+    avatar: "https://i.pravatar.cc/150?img=48",
+    name: "Cole Strickland",
+    message: "RegionTrackingUpdates.pdf",
+  },
+];

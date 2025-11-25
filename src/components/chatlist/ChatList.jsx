@@ -75,14 +75,14 @@ export default function ChatList({ search, filterType, onSelectChat, setShowAICh
     group.name.toLowerCase().includes(search.toLowerCase())
   );
   return (
-    <aside className="flex flex-col  py-4 h-full overflow-y-auto border-l-2 border-l-[#efeff1]">
-      <div className="flex items-center justify-between mb-2 ">
-        <div className="text-[#2d2c31] text-3xl mt-1 mb-4 ml-4 font-[Poppins] font-semibold ">
+    <aside className="flex flex-col py-4 h-full overflow-y-auto border-l-2 border-l-[#efeff1] px-2 lg:px-0">
+      <div className="flex items-center justify-between mb-2">
+        <div className="text-[#2d2c31] text-2xl lg:text-3xl mt-1 mb-4 ml-2 lg:ml-4 font-[Poppins] font-semibold">
           Groups
         </div>
       </div>
       {(filterType === "all" || filterType === "groups") && (
-        <div className="flex flex-col gap-1 mb-3 ">
+        <div className="flex flex-col gap-1 mb-3">
           {filteredGroups.length > 0 ? (
             filteredGroups.map((chat) => <ChatItem key={chat.id} {...chat} />)
           ) : (
@@ -91,12 +91,12 @@ export default function ChatList({ search, filterType, onSelectChat, setShowAICh
         </div>
       )}
 
-      <button className="text-[#a097ce] text-[12px] mt-1 mb-4 px-1  hover:underline cursor-pointer">
+      <button className="text-[#a097ce] text-[12px] mt-1 mb-4 px-1 hover:underline cursor-pointer self-start ml-2 lg:ml-4">
         SHOW ALL
       </button>
 
       <div className="flex items-center justify-between mb-2">
-        <div className="text-[#2d2c31] text-3xl mt-1 mb-4 ml-4 font-[Poppins] font-semibold">
+        <div className="text-[#2d2c31] text-2xl lg:text-3xl mt-1 mb-4 ml-2 lg:ml-4 font-[Poppins] font-semibold">
           Person
         </div>
       </div>
@@ -111,9 +111,9 @@ export default function ChatList({ search, filterType, onSelectChat, setShowAICh
                   setSelectedChatId(user.id);
                   onSelectChat({ id: user.id, type: "user" });
                   setShowAIChat(false);
+                  console.log("Clicked chat:", user);
                 }}
                 isSelected={selectedChatId === user.id}
-                
               />
             ))
           ) : (
@@ -122,7 +122,7 @@ export default function ChatList({ search, filterType, onSelectChat, setShowAICh
         </div>
       )}
 
-      <button className="text-[#a097ce] text-[12px] mt-1 mb-4 px-1  hover:underline cursor-pointer">
+      <button className="text-[#a097ce] text-[12px] mt-1 mb-4 px-1 hover:underline cursor-pointer self-start ml-2 lg:ml-4">
         SHOW ALL
       </button>
     </aside>

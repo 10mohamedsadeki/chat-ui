@@ -38,14 +38,21 @@ const sidebarItems = [
   },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ isSidebarOpen }) {
   const [active, setActive] = useState("B");
   const [itemActive, setItemActive] = useState("Messages");
   return (
-    <div className="flex flex-row relative">
-      <div className="absolute -top-28 left-14 w-64 -rotate-20 h-96 bg-white/5 rounded-full "></div>
+   
+    <div
+      className={`fixed lg:relative inset-y-0 left-0 flex flex-row z-30 transform transition-transform duration-300 ease-in-out ${
+        isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+      } lg:translate-x-0`}
+    >
+      <div className="absolute lg:-top-28 -top-36 lg:left-14 left-10 lg:w-64 w-56 rotate-6 lg:-rotate-20 h-96 bg-white/5 rounded-full  lg:block"></div>
+      <div className="absolute lg:top-[400px]  top-[400px] lg:left-16 left-16 lg:w-20 w-24 rotate-6 lg:-rotate-20 h-24 bg-white/5 rounded-full  lg:block"></div>
+      <div className="absolute lg:top-[470px]  top-[490px] lg:left-30 left-30 lg:w-10 w-16 rotate-6 lg:-rotate-20 h-16 bg-white/5 rounded-full  lg:block"></div>
 
-
+     
       <div className="h-screen w-[75px] rounded-r-[34px] bg-[#5f46e2] z-10">
         <div className="flex flex-col items-center h-full gap-16">
           <h1 className="text-[22px] font-semibold rotate-90 tracking-wide text-white mt-[60px]">
@@ -80,6 +87,7 @@ export default function Sidebar() {
         </div>
       </div>
 
+      
       <div className="h-screen w-[247px] bg-[#745afc] -ml-8 rounded-r-[34px] shadow-lg ">
         <div className="flex flex-col items-center mt-[60px] gap-16">
           <div className="flex flex-row items-center w-full justify-between px-5">
@@ -133,7 +141,7 @@ export default function Sidebar() {
                 )}
 
                 <div
-                  className={`relative flex items-center justify-between px-4 py-3 ` }
+                  className={`relative flex items-center justify-between px-4 py-3 `}
                 >
                   <div className="flex items-center gap-3">
                     <item.icon
@@ -151,8 +159,6 @@ export default function Sidebar() {
                       {item.label}
                     </span>
                   </div>
-
-                  
                 </div>
               </div>
             ))}

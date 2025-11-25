@@ -46,9 +46,9 @@ const MainChat = () => {
           setShowAIChat={setShowAIChat}
         />
 
-        {/* -- هذا هو الجزء الذي تم تبسيطه بالكامل -- */}
+       
         <div className="flex flex-1 overflow-hidden">
-          {/* عرض قائمة الدردشة */}
+          
           <div
             className={`
               ${isChatting ? "hidden" : "flex"}
@@ -64,7 +64,7 @@ const MainChat = () => {
             />
           </div>
 
-          {/* عرض قسم الدردشة */}
+          
           {isChatting && (
             <div className="w-full h-full flex flex-col lg:flex-1 lg:ml-5">
               {showAIChat ? (
@@ -75,7 +75,7 @@ const MainChat = () => {
             </div>
           )}
 
-          {/* عرض قسم الدردشة الفارغ على الشاشات الكبيرة فقط */}
+         
           {!isChatting && (
             <div className="hidden lg:flex flex-1 ml-5 h-full">
                <div className="flex items-center justify-center h-full w-full text-gray-400 text-lg px-4 text-center">
